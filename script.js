@@ -399,8 +399,8 @@ function startGame() {
 
   collisionRafId = requestAnimationFrame(collisionLoop);
 
-  // Create new drops every second (1000 milliseconds)
-  dropMaker = setInterval(createDrop, 1000);
+  // Spawn often enough that 20 good catches is realistic within the round (~54% good drops).
+  dropMaker = setInterval(createDrop, 500);
 
   countdownTimer = setInterval(updateCountdownDisplay, 100);
 }
