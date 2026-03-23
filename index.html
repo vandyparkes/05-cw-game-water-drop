@@ -8,13 +8,26 @@
 </head>
 <body>
     <div class="game-wrapper">
-        <h1 class="game-title">Water Drop</h1>
-        <p class="game-tagline">Catch the good drops, avoid the bad ones!</p>
+        <header class="game-header">
+            <h1 class="game-title">Water Drop</h1>
+            <p class="game-tagline">Catch the good drops, dodge obstacles that cost points, and avoid the bad ones!</p>
+        </header>
+        <img src="img/cw_logo-horizontal.png" alt="charity: water" class="cw-logo-horizontal">
         <div class="score-panel">
             <div class="score">Score: <span id="score">0</span></div>
-            <div class="timer">Time: <span id="time">30</span>s</div>
-            <button id="start-btn">Start Game</button>
+            <div class="streak">Streak: <span id="streak">0</span></div>
+            <div class="timer">Time left: <span id="time">0:30</span></div>
+            <div class="score-panel-buttons">
+                <button id="start-btn" type="button">Start Game</button>
+                <button id="reset-btn" type="button">Reset</button>
+            </div>
         </div>
+
+        <section class="highscores-panel" aria-labelledby="highscores-heading">
+            <h2 id="highscores-heading" class="highscores-heading">High scores</h2>
+            <ol id="highscores-list" class="highscores-list"></ol>
+            <p id="highscores-empty" class="highscores-empty" hidden>No scores yet — finish a game to save one.</p>
+        </section>
         
         <div id="game-container">
         </div>
